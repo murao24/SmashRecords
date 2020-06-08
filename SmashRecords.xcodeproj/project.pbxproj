@@ -12,11 +12,16 @@
 		04204543248DB9BE00DAED78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04204541248DB9BE00DAED78 /* Main.storyboard */; };
 		04204545248DB9BF00DAED78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04204544248DB9BF00DAED78 /* Assets.xcassets */; };
 		04204548248DB9BF00DAED78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04204546248DB9BF00DAED78 /* LaunchScreen.storyboard */; };
-		043C1B6C248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B6B248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift */; };
+		043C1B6C248DDCFA0059C6C5 /* NoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B6B248DDCFA0059C6C5 /* NoteTableViewCell.swift */; };
 		043C1B6E248DDD580059C6C5 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B6D248DDD580059C6C5 /* NoteViewController.swift */; };
 		043C1B70248DDD9B0059C6C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B6F248DDD9B0059C6C5 /* Constants.swift */; };
 		043C1B73248DFF0B0059C6C5 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B72248DFF0B0059C6C5 /* TextViewViewController.swift */; };
 		043C1B75248E00B60059C6C5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B74248E00B60059C6C5 /* Note.swift */; };
+		043C1B77248E1C660059C6C5 /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B76248E1C660059C6C5 /* RecordViewController.swift */; };
+		043C1B79248E1DE00059C6C5 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B78248E1DE00059C6C5 /* ContainerViewController.swift */; };
+		043C1B7B248E1F9A0059C6C5 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B7A248E1F9A0059C6C5 /* RecordTableViewCell.swift */; };
+		043C1B7D248E25980059C6C5 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B7C248E25980059C6C5 /* Record.swift */; };
+		043C1B7F248E27440059C6C5 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B7E248E27440059C6C5 /* UIView+AddBorder.swift */; };
 		F61700FD0060FD0C27CC7B60 /* Pods_SmashRecords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E499C1802254A7930DA157 /* Pods_SmashRecords.framework */; };
 /* End PBXBuildFile section */
 
@@ -28,11 +33,16 @@
 		04204544248DB9BF00DAED78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04204547248DB9BF00DAED78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04204549248DB9BF00DAED78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		043C1B6B248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNoteTableViewCell.swift; sourceTree = "<group>"; };
+		043C1B6B248DDCFA0059C6C5 /* NoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteTableViewCell.swift; sourceTree = "<group>"; };
 		043C1B6D248DDD580059C6C5 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
 		043C1B6F248DDD9B0059C6C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		043C1B72248DFF0B0059C6C5 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
 		043C1B74248E00B60059C6C5 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Note.swift; path = SmashRecords/Controllers/Note.swift; sourceTree = SOURCE_ROOT; };
+		043C1B76248E1C660059C6C5 /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordViewController.swift; path = SmashRecords/Views/RecordViewController.swift; sourceTree = SOURCE_ROOT; };
+		043C1B78248E1DE00059C6C5 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ContainerViewController.swift; path = SmashRecords/Views/ContainerViewController.swift; sourceTree = SOURCE_ROOT; };
+		043C1B7A248E1F9A0059C6C5 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
+		043C1B7C248E25980059C6C5 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Record.swift; path = SmashRecords/Controllers/Record.swift; sourceTree = SOURCE_ROOT; };
+		043C1B7E248E27440059C6C5 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+AddBorder.swift"; path = "SmashRecords/Controllers/UIView+AddBorder.swift"; sourceTree = SOURCE_ROOT; };
 		41E499C1802254A7930DA157 /* Pods_SmashRecords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashRecords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BE0B8C1BEDC7CF272001A7 /* Pods-SmashRecords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecords.release.xcconfig"; path = "Target Support Files/Pods-SmashRecords/Pods-SmashRecords.release.xcconfig"; sourceTree = "<group>"; };
 		E52273572A58D2A50FC72932 /* Pods-SmashRecords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecords.debug.xcconfig"; path = "Target Support Files/Pods-SmashRecords/Pods-SmashRecords.debug.xcconfig"; sourceTree = "<group>"; };
@@ -87,7 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				04204541248DB9BE00DAED78 /* Main.storyboard */,
-				043C1B6B248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift */,
+				043C1B7A248E1F9A0059C6C5 /* RecordTableViewCell.swift */,
+				043C1B6B248DDCFA0059C6C5 /* NoteTableViewCell.swift */,
+				043C1B7E248E27440059C6C5 /* UIView+AddBorder.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -95,6 +107,8 @@
 		043C1B6A248DDCD80059C6C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				043C1B78248E1DE00059C6C5 /* ContainerViewController.swift */,
+				043C1B76248E1C660059C6C5 /* RecordViewController.swift */,
 				043C1B6D248DDD580059C6C5 /* NoteViewController.swift */,
 				043C1B72248DFF0B0059C6C5 /* TextViewViewController.swift */,
 			);
@@ -105,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				043C1B6F248DDD9B0059C6C5 /* Constants.swift */,
+				043C1B7C248E25980059C6C5 /* Record.swift */,
 				043C1B74248E00B60059C6C5 /* Note.swift */,
 			);
 			path = Models;
@@ -244,10 +259,15 @@
 			files = (
 				043C1B70248DDD9B0059C6C5 /* Constants.swift in Sources */,
 				043C1B75248E00B60059C6C5 /* Note.swift in Sources */,
-				043C1B6C248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift in Sources */,
+				043C1B6C248DDCFA0059C6C5 /* NoteTableViewCell.swift in Sources */,
+				043C1B77248E1C660059C6C5 /* RecordViewController.swift in Sources */,
 				0420453C248DB9BE00DAED78 /* AppDelegate.swift in Sources */,
 				043C1B6E248DDD580059C6C5 /* NoteViewController.swift in Sources */,
+				043C1B7D248E25980059C6C5 /* Record.swift in Sources */,
 				043C1B73248DFF0B0059C6C5 /* TextViewViewController.swift in Sources */,
+				043C1B7F248E27440059C6C5 /* UIView+AddBorder.swift in Sources */,
+				043C1B79248E1DE00059C6C5 /* ContainerViewController.swift in Sources */,
+				043C1B7B248E1F9A0059C6C5 /* RecordTableViewCell.swift in Sources */,
 				0420453E248DB9BE00DAED78 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

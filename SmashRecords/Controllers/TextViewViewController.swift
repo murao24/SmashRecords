@@ -24,8 +24,6 @@ class TextViewViewController: UIViewController, UITextViewDelegate {
 
         textView.delegate = self
         navigationController?.delegate = self
-    
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
     override func viewWillAppear(_ animated: Bool) {
