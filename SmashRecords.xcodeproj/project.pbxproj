@@ -3,16 +3,20 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		0420453C248DB9BE00DAED78 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420453B248DB9BE00DAED78 /* AppDelegate.swift */; };
 		0420453E248DB9BE00DAED78 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420453D248DB9BE00DAED78 /* SceneDelegate.swift */; };
-		04204540248DB9BE00DAED78 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0420453F248DB9BE00DAED78 /* ViewController.swift */; };
 		04204543248DB9BE00DAED78 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04204541248DB9BE00DAED78 /* Main.storyboard */; };
 		04204545248DB9BF00DAED78 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04204544248DB9BF00DAED78 /* Assets.xcassets */; };
 		04204548248DB9BF00DAED78 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04204546248DB9BF00DAED78 /* LaunchScreen.storyboard */; };
+		043C1B6C248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B6B248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift */; };
+		043C1B6E248DDD580059C6C5 /* NoteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B6D248DDD580059C6C5 /* NoteViewController.swift */; };
+		043C1B70248DDD9B0059C6C5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B6F248DDD9B0059C6C5 /* Constants.swift */; };
+		043C1B73248DFF0B0059C6C5 /* TextViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B72248DFF0B0059C6C5 /* TextViewViewController.swift */; };
+		043C1B75248E00B60059C6C5 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B74248E00B60059C6C5 /* Note.swift */; };
 		F61700FD0060FD0C27CC7B60 /* Pods_SmashRecords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E499C1802254A7930DA157 /* Pods_SmashRecords.framework */; };
 /* End PBXBuildFile section */
 
@@ -20,11 +24,15 @@
 		04204538248DB9BE00DAED78 /* SmashRecords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmashRecords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0420453B248DB9BE00DAED78 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0420453D248DB9BE00DAED78 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0420453F248DB9BE00DAED78 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		04204542248DB9BE00DAED78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04204544248DB9BF00DAED78 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04204547248DB9BF00DAED78 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04204549248DB9BF00DAED78 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		043C1B6B248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNoteTableViewCell.swift; sourceTree = "<group>"; };
+		043C1B6D248DDD580059C6C5 /* NoteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteViewController.swift; sourceTree = "<group>"; };
+		043C1B6F248DDD9B0059C6C5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		043C1B72248DFF0B0059C6C5 /* TextViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViewViewController.swift; sourceTree = "<group>"; };
+		043C1B74248E00B60059C6C5 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Note.swift; path = SmashRecords/Controllers/Note.swift; sourceTree = SOURCE_ROOT; };
 		41E499C1802254A7930DA157 /* Pods_SmashRecords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashRecords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BE0B8C1BEDC7CF272001A7 /* Pods-SmashRecords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecords.release.xcconfig"; path = "Target Support Files/Pods-SmashRecords/Pods-SmashRecords.release.xcconfig"; sourceTree = "<group>"; };
 		E52273572A58D2A50FC72932 /* Pods-SmashRecords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecords.debug.xcconfig"; path = "Target Support Files/Pods-SmashRecords/Pods-SmashRecords.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,13 +73,41 @@
 			children = (
 				0420453B248DB9BE00DAED78 /* AppDelegate.swift */,
 				0420453D248DB9BE00DAED78 /* SceneDelegate.swift */,
-				0420453F248DB9BE00DAED78 /* ViewController.swift */,
-				04204541248DB9BE00DAED78 /* Main.storyboard */,
+				043C1B71248DDDA10059C6C5 /* Models */,
+				043C1B69248DDCCF0059C6C5 /* Views */,
+				043C1B6A248DDCD80059C6C5 /* Controllers */,
 				04204544248DB9BF00DAED78 /* Assets.xcassets */,
 				04204546248DB9BF00DAED78 /* LaunchScreen.storyboard */,
 				04204549248DB9BF00DAED78 /* Info.plist */,
 			);
 			path = SmashRecords;
+			sourceTree = "<group>";
+		};
+		043C1B69248DDCCF0059C6C5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				04204541248DB9BE00DAED78 /* Main.storyboard */,
+				043C1B6B248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		043C1B6A248DDCD80059C6C5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				043C1B6D248DDD580059C6C5 /* NoteViewController.swift */,
+				043C1B72248DFF0B0059C6C5 /* TextViewViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		043C1B71248DDDA10059C6C5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				043C1B6F248DDD9B0059C6C5 /* Constants.swift */,
+				043C1B74248E00B60059C6C5 /* Note.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		4670C297FCF709A912520C78 /* Frameworks */ = {
@@ -88,7 +124,6 @@
 				E52273572A58D2A50FC72932 /* Pods-SmashRecords.debug.xcconfig */,
 				81BE0B8C1BEDC7CF272001A7 /* Pods-SmashRecords.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -207,8 +242,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04204540248DB9BE00DAED78 /* ViewController.swift in Sources */,
+				043C1B70248DDD9B0059C6C5 /* Constants.swift in Sources */,
+				043C1B75248E00B60059C6C5 /* Note.swift in Sources */,
+				043C1B6C248DDCFA0059C6C5 /* CustomNoteTableViewCell.swift in Sources */,
 				0420453C248DB9BE00DAED78 /* AppDelegate.swift in Sources */,
+				043C1B6E248DDD580059C6C5 /* NoteViewController.swift in Sources */,
+				043C1B73248DFF0B0059C6C5 /* TextViewViewController.swift in Sources */,
 				0420453E248DB9BE00DAED78 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,7 +403,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoshinobu.SmashRecords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -383,7 +422,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yoshinobu.SmashRecords;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
