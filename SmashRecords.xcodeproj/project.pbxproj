@@ -22,6 +22,9 @@
 		043C1B7B248E1F9A0059C6C5 /* RecordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B7A248E1F9A0059C6C5 /* RecordTableViewCell.swift */; };
 		043C1B7D248E25980059C6C5 /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B7C248E25980059C6C5 /* Record.swift */; };
 		043C1B7F248E27440059C6C5 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B7E248E27440059C6C5 /* UIView+AddBorder.swift */; };
+		043C1B81248F45CF0059C6C5 /* RecordFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B80248F45CF0059C6C5 /* RecordFormViewController.swift */; };
+		043C1B83248F45E60059C6C5 /* SelectFighterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B82248F45E60059C6C5 /* SelectFighterViewController.swift */; };
+		04B0807C248F48C000C7AA22 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0807B248F48C000C7AA22 /* ToggleButton.swift */; };
 		F61700FD0060FD0C27CC7B60 /* Pods_SmashRecords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E499C1802254A7930DA157 /* Pods_SmashRecords.framework */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +46,9 @@
 		043C1B7A248E1F9A0059C6C5 /* RecordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordTableViewCell.swift; sourceTree = "<group>"; };
 		043C1B7C248E25980059C6C5 /* Record.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Record.swift; path = SmashRecords/Controllers/Record.swift; sourceTree = SOURCE_ROOT; };
 		043C1B7E248E27440059C6C5 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+AddBorder.swift"; path = "SmashRecords/Controllers/UIView+AddBorder.swift"; sourceTree = SOURCE_ROOT; };
+		043C1B80248F45CF0059C6C5 /* RecordFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordFormViewController.swift; path = SmashRecords/Views/RecordFormViewController.swift; sourceTree = SOURCE_ROOT; };
+		043C1B82248F45E60059C6C5 /* SelectFighterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFighterViewController.swift; sourceTree = "<group>"; };
+		04B0807B248F48C000C7AA22 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		41E499C1802254A7930DA157 /* Pods_SmashRecords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashRecords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BE0B8C1BEDC7CF272001A7 /* Pods-SmashRecords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecords.release.xcconfig"; path = "Target Support Files/Pods-SmashRecords/Pods-SmashRecords.release.xcconfig"; sourceTree = "<group>"; };
 		E52273572A58D2A50FC72932 /* Pods-SmashRecords.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecords.debug.xcconfig"; path = "Target Support Files/Pods-SmashRecords/Pods-SmashRecords.debug.xcconfig"; sourceTree = "<group>"; };
@@ -109,8 +115,11 @@
 			children = (
 				043C1B78248E1DE00059C6C5 /* ContainerViewController.swift */,
 				043C1B76248E1C660059C6C5 /* RecordViewController.swift */,
+				043C1B80248F45CF0059C6C5 /* RecordFormViewController.swift */,
+				043C1B82248F45E60059C6C5 /* SelectFighterViewController.swift */,
 				043C1B6D248DDD580059C6C5 /* NoteViewController.swift */,
 				043C1B72248DFF0B0059C6C5 /* TextViewViewController.swift */,
+				04B0807B248F48C000C7AA22 /* ToggleButton.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -258,12 +267,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				043C1B70248DDD9B0059C6C5 /* Constants.swift in Sources */,
+				04B0807C248F48C000C7AA22 /* ToggleButton.swift in Sources */,
 				043C1B75248E00B60059C6C5 /* Note.swift in Sources */,
 				043C1B6C248DDCFA0059C6C5 /* NoteTableViewCell.swift in Sources */,
 				043C1B77248E1C660059C6C5 /* RecordViewController.swift in Sources */,
+				043C1B81248F45CF0059C6C5 /* RecordFormViewController.swift in Sources */,
 				0420453C248DB9BE00DAED78 /* AppDelegate.swift in Sources */,
 				043C1B6E248DDD580059C6C5 /* NoteViewController.swift in Sources */,
 				043C1B7D248E25980059C6C5 /* Record.swift in Sources */,
+				043C1B83248F45E60059C6C5 /* SelectFighterViewController.swift in Sources */,
 				043C1B73248DFF0B0059C6C5 /* TextViewViewController.swift in Sources */,
 				043C1B7F248E27440059C6C5 /* UIView+AddBorder.swift in Sources */,
 				043C1B79248E1DE00059C6C5 /* ContainerViewController.swift in Sources */,

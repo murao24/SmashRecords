@@ -1,0 +1,24 @@
+//
+//  ToggleButton.swift
+//  SmashRecords
+//
+//  Created by 村尾慶伸 on 2020/06/09.
+//  Copyright © 2020 村尾慶伸. All rights reserved.
+//
+
+import UIKit
+
+extension UIViewController {
+    
+    // button toggle
+    func onButton(button: UIButton) {
+        button.isSelected = true
+        button.isEnabled = false
+    }
+    
+    func offButton(button: UIButton) {
+        button.isSelected = false
+        button.isEnabled = true
+    }
+    
+}

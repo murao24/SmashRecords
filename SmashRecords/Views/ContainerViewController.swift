@@ -12,6 +12,8 @@ class ContainerViewController: UIViewController {
 
     @IBOutlet weak var addButton: UIButton!
     
+    private var recordVC: RecordViewController!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +27,17 @@ class ContainerViewController: UIViewController {
         addButton.layer.shadowOffset = CGSize(width: 1, height: 1)
         addButton.layer.shadowOpacity = 0.5
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let tableVC = segue.destination as? RecordViewController {
+            self.recordVC = tableVC
+        }
+    }
+    
+    @IBAction func addButtonPressed(_ sender: Any) {
+        let recordFormVC = storyboard?.instantiateViewController(identifier: "RecordFormViewController") as! RecordFormViewController
+        present(recordFormVC, animated: true, completion: nil)
+    }
+    
 
 }
