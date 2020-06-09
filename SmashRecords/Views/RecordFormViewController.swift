@@ -11,6 +11,8 @@ import RealmSwift
 
 class RecordFormViewController: UIViewController {
     
+    private var records: Results<Record>?
+    
     let realm = try! Realm()
     
     @IBOutlet weak var myFighterView: UIButton!
@@ -18,10 +20,12 @@ class RecordFormViewController: UIViewController {
     @IBOutlet var stageButtons: [UIButton]!
     @IBOutlet var resultButtons: [UIButton]!
     @IBOutlet weak var registerButton: UIButton!
+
     
     var myFighter = "mario"
     var opponentFighter = "mario"
     var stage = "終点"
+    var result = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -60,16 +64,22 @@ class RecordFormViewController: UIViewController {
         switch sender.tag {
         case 0:
             onButton(button: stageButtons[0])
+            stage = S.stageArray[0]
         case 1:
             onButton(button: stageButtons[1])
+            stage = S.stageArray[1]
         case 2:
             onButton(button: stageButtons[2])
+            stage = S.stageArray[2]
         case 3:
             onButton(button: stageButtons[3])
+            stage = S.stageArray[3]
         case 4:
             onButton(button: stageButtons[4])
+            stage = S.stageArray[4]
         case 5:
             onButton(button: stageButtons[5])
+            stage = S.stageArray[5]
         default:
             break
         }
@@ -82,8 +92,10 @@ class RecordFormViewController: UIViewController {
         switch sender.tag {
         case 0:
             onButton(button: resultButtons[0])
+            result = true
         case 1:
             onButton(button: resultButtons[1])
+            result = false
         default:
             break
         }
@@ -91,6 +103,36 @@ class RecordFormViewController: UIViewController {
  
     @IBAction func registerButtonPressed(_ sender: Any) {
         
+        let newRecord = Record()
+        newRecord.date = Date()
+        newRecord.myFighter = myFighter
+        newRecord.opponentFighter = opponentFighter
+        newRecord.stage = stage
+        newRecord.result = result
+        save(record: newRecord)
+        dismiss(animated: true, completion: nil)
     }
     
+    func save(record: Record) {
+        do {
+            try realm.write {
+                realm.add(record)
+            }
+        } catch {
+            print("Error saving a record\(error)")
+        }
+    }
+    
+}
+
+extension RecordFormViewController {
+    
+    override func dismiss(animated flag: Bool, completion: (() -> Void)? = nil) {
+        super.dismiss(animated: flag, completion: completion)
+        guard let presentationController = presentationController else {
+            return
+        }
+        presentationController.delegate?.presentationControllerDidDismiss?(presentationController)
+    }
+
 }

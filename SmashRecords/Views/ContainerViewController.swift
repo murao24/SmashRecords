@@ -36,8 +36,15 @@ class ContainerViewController: UIViewController {
     
     @IBAction func addButtonPressed(_ sender: Any) {
         let recordFormVC = storyboard?.instantiateViewController(identifier: "RecordFormViewController") as! RecordFormViewController
+        recordFormVC.presentationController?.delegate = self
         present(recordFormVC, animated: true, completion: nil)
     }
     
 
+}
+
+extension ContainerViewController: UIAdaptivePresentationControllerDelegate {
+    func presentationControllerDidDismiss(_ presentationController: UIPresentationController) {
+        recordVC.tableView.reloadData()
+    }
 }

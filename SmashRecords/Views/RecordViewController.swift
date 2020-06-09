@@ -67,6 +67,8 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! RecordTableViewCell
         
+        cell.stageLabel.adjustsFontSizeToFitWidth = true
+        
         if let record = records?[indexPath.row] {
             if record.result == true {
                 cell.resultLabel.text = "勝ち"
@@ -88,8 +90,6 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
-    
     
 
 }
