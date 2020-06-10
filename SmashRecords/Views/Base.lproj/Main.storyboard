@@ -30,6 +30,15 @@
                     <view key="view" contentMode="scaleToFill" id="9Od-Bd-FgB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4bf-pa-hC0">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="jQw-Hg-O4g" kind="embed" id="w7L-LI-Lxl"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="hQp-Cw-AlZ"/>
                     </view>
@@ -37,7 +46,107 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="63F-b0-yXi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2755" y="1456"/>
+            <point key="canvasLocation" x="2760.8695652173915" y="1652.6785714285713"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="LVF-Gs-W2N">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="jQw-Hg-O4g" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NQj-qn-Oqx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3732" y="1658"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Qy3-82-yir">
+            <objects>
+                <viewController storyboardIdentifier="MyViewController" id="Pg2-HU-Wtv" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lj6-h7-SDE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="w0b-Bv-NHy">
+                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NK9-55-f0K">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="自分">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wGB-ri-rby">
+                                        <rect key="frame" x="149" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="相手">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oLE-YD-jVc">
+                                        <rect key="frame" x="298" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="ステージ">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="0HI-n8-sxU">
+                                <rect key="frame" x="20" y="74" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pJG-vx-lwh">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="自分">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XeX-7L-COX">
+                                        <rect key="frame" x="79" y="0.0" width="58.5" height="30"/>
+                                        <state key="normal" title="試合数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dMf-eC-2ly">
+                                        <rect key="frame" x="157.5" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="勝ち数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ded-YS-6PM">
+                                        <rect key="frame" x="236.5" y="0.0" width="58.5" height="30"/>
+                                        <state key="normal" title="負け数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="05z-L4-MJN">
+                                        <rect key="frame" x="315" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="勝率">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oFY-ab-G6k">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oFY-ab-G6k" firstAttribute="top" secondItem="0HI-n8-sxU" secondAttribute="bottom" id="0Zv-ah-Ue6"/>
+                            <constraint firstItem="0HI-n8-sxU" firstAttribute="leading" secondItem="8BF-b7-acX" secondAttribute="leading" constant="20" id="8xF-FC-odR"/>
+                            <constraint firstItem="8BF-b7-acX" firstAttribute="trailing" secondItem="w0b-Bv-NHy" secondAttribute="trailing" constant="20" id="Av7-Hh-1s7"/>
+                            <constraint firstItem="8BF-b7-acX" firstAttribute="bottom" secondItem="oFY-ab-G6k" secondAttribute="bottom" id="O08-68-mao"/>
+                            <constraint firstItem="8BF-b7-acX" firstAttribute="trailing" secondItem="0HI-n8-sxU" secondAttribute="trailing" constant="20" id="YnL-dE-Ijo"/>
+                            <constraint firstItem="0HI-n8-sxU" firstAttribute="top" secondItem="w0b-Bv-NHy" secondAttribute="bottom" id="Z8w-4M-4E8"/>
+                            <constraint firstItem="w0b-Bv-NHy" firstAttribute="top" secondItem="8BF-b7-acX" secondAttribute="top" id="ZUJ-dn-s7U"/>
+                            <constraint firstItem="w0b-Bv-NHy" firstAttribute="leading" secondItem="8BF-b7-acX" secondAttribute="leading" constant="20" id="bhg-Dw-saG"/>
+                            <constraint firstItem="oFY-ab-G6k" firstAttribute="leading" secondItem="8BF-b7-acX" secondAttribute="leading" id="f23-TC-4ko"/>
+                            <constraint firstItem="0HI-n8-sxU" firstAttribute="top" secondItem="w0b-Bv-NHy" secondAttribute="bottom" id="ouC-Wy-ZW2"/>
+                            <constraint firstItem="oFY-ab-G6k" firstAttribute="trailing" secondItem="8BF-b7-acX" secondAttribute="trailing" id="zow-fQ-ewF"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8BF-b7-acX"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tdI-ae-Lc7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4681.159420289855" y="1641.9642857142856"/>
         </scene>
         <!--メモ-->
         <scene sceneID="UKq-sl-LKx">
@@ -110,7 +219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8hV-cS-OVJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754" y="2103"/>
+            <point key="canvasLocation" x="2761" y="2486"/>
         </scene>
         <!--Text View View Controller-->
         <scene sceneID="jiy-CS-Ybl">
@@ -144,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nbl-q7-dmH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3661" y="2103"/>
+            <point key="canvasLocation" x="3668" y="2486"/>
         </scene>
         <!--記録-->
         <scene sceneID="wHp-wx-MEm">
@@ -1140,7 +1249,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gTT-Eh-c18" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1845" y="1456"/>
+            <point key="canvasLocation" x="1852" y="1653"/>
         </scene>
         <!--メモ-->
         <scene sceneID="b25-Wo-aZ3">
@@ -1159,7 +1268,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jc0-kd-lcq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1843" y="2103"/>
+            <point key="canvasLocation" x="1849" y="2486"/>
         </scene>
         <!--Record View Controller-->
         <scene sceneID="e5p-Hg-MGb">
@@ -1279,6 +1388,190 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NlO-ej-HZa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3604" y="-512"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FFx-Sh-p7a">
+            <objects>
+                <viewController storyboardIdentifier="OpponentViewController" id="QuT-bO-hHb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eRq-ag-Cae">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="GRX-9N-IF1">
+                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Xg-u2-5UE">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="自分">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDT-Qc-Uor">
+                                        <rect key="frame" x="149" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="相手">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7AM-9i-NG3">
+                                        <rect key="frame" x="298" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="ステージ">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="jD2-vP-jYv">
+                                <rect key="frame" x="20" y="74" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1yb-LI-3Dw">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="自分">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Y0-Ds-Jb2">
+                                        <rect key="frame" x="79" y="0.0" width="58.5" height="30"/>
+                                        <state key="normal" title="試合数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S7R-0w-oFK">
+                                        <rect key="frame" x="157.5" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="勝ち数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eyl-af-wLt">
+                                        <rect key="frame" x="236.5" y="0.0" width="58.5" height="30"/>
+                                        <state key="normal" title="負け数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGr-Va-fba">
+                                        <rect key="frame" x="315" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="勝率">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-dg-384">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ddK-KI-xqy" firstAttribute="trailing" secondItem="GRX-9N-IF1" secondAttribute="trailing" constant="20" id="2xV-Oh-WSD"/>
+                            <constraint firstItem="ddK-KI-xqy" firstAttribute="trailing" secondItem="jD2-vP-jYv" secondAttribute="trailing" constant="20" id="8sA-ft-8II"/>
+                            <constraint firstItem="mCF-dg-384" firstAttribute="top" secondItem="jD2-vP-jYv" secondAttribute="bottom" id="HW5-u5-yNJ"/>
+                            <constraint firstItem="mCF-dg-384" firstAttribute="leading" secondItem="ddK-KI-xqy" secondAttribute="leading" id="Nqh-HE-tq0"/>
+                            <constraint firstItem="GRX-9N-IF1" firstAttribute="top" secondItem="ddK-KI-xqy" secondAttribute="top" id="R6c-Wb-bAM"/>
+                            <constraint firstItem="jD2-vP-jYv" firstAttribute="top" secondItem="GRX-9N-IF1" secondAttribute="bottom" id="eSO-mC-R5h"/>
+                            <constraint firstItem="mCF-dg-384" firstAttribute="trailing" secondItem="ddK-KI-xqy" secondAttribute="trailing" id="eqt-V1-UBj"/>
+                            <constraint firstItem="jD2-vP-jYv" firstAttribute="leading" secondItem="ddK-KI-xqy" secondAttribute="leading" constant="20" id="lDV-vJ-7MD"/>
+                            <constraint firstItem="GRX-9N-IF1" firstAttribute="leading" secondItem="ddK-KI-xqy" secondAttribute="leading" constant="20" id="me4-h9-F5f"/>
+                            <constraint firstItem="jD2-vP-jYv" firstAttribute="top" secondItem="GRX-9N-IF1" secondAttribute="bottom" id="pXB-tb-J63"/>
+                            <constraint firstItem="ddK-KI-xqy" firstAttribute="bottom" secondItem="mCF-dg-384" secondAttribute="bottom" id="zXa-WZ-5Cg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ddK-KI-xqy"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cy7-Kw-t0R" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5455" y="1642"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="xPe-PJ-3Bl">
+            <objects>
+                <viewController storyboardIdentifier="StageViewController" id="ZFh-rw-bl3" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="d83-ZR-bb0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="73" translatesAutoresizingMaskIntoConstraints="NO" id="PJW-Si-ZqA">
+                                <rect key="frame" x="20" y="44" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cUV-bx-DdZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="自分">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ikL-8C-bbS">
+                                        <rect key="frame" x="149" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="相手">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfs-W2-qYZ">
+                                        <rect key="frame" x="298" y="0.0" width="76" height="30"/>
+                                        <state key="normal" title="ステージ">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="gsH-z0-1Em">
+                                <rect key="frame" x="20" y="74" width="374" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mbk-wc-QoN">
+                                        <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="自分">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hx0-K1-aZ2">
+                                        <rect key="frame" x="79" y="0.0" width="58.5" height="30"/>
+                                        <state key="normal" title="試合数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m9p-vw-1dB">
+                                        <rect key="frame" x="157.5" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="勝ち数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehy-ip-VI5">
+                                        <rect key="frame" x="236.5" y="0.0" width="58.5" height="30"/>
+                                        <state key="normal" title="負け数">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hQ7-Yi-Ced">
+                                        <rect key="frame" x="315" y="0.0" width="59" height="30"/>
+                                        <state key="normal" title="勝率">
+                                            <color key="titleColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZtG-IY-e6r">
+                                <rect key="frame" x="0.0" y="104" width="414" height="758"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RdZ-RG-fMN" firstAttribute="bottom" secondItem="ZtG-IY-e6r" secondAttribute="bottom" id="0Yg-xM-mRW"/>
+                            <constraint firstItem="gsH-z0-1Em" firstAttribute="top" secondItem="PJW-Si-ZqA" secondAttribute="bottom" id="32t-Sc-pkV"/>
+                            <constraint firstItem="RdZ-RG-fMN" firstAttribute="trailing" secondItem="PJW-Si-ZqA" secondAttribute="trailing" constant="20" id="BfV-XL-Rm7"/>
+                            <constraint firstItem="gsH-z0-1Em" firstAttribute="leading" secondItem="RdZ-RG-fMN" secondAttribute="leading" constant="20" id="Bxc-Tz-JOn"/>
+                            <constraint firstItem="gsH-z0-1Em" firstAttribute="top" secondItem="PJW-Si-ZqA" secondAttribute="bottom" id="IMz-hH-F9H"/>
+                            <constraint firstItem="PJW-Si-ZqA" firstAttribute="top" secondItem="RdZ-RG-fMN" secondAttribute="top" id="IsR-x1-ptE"/>
+                            <constraint firstItem="ZtG-IY-e6r" firstAttribute="leading" secondItem="RdZ-RG-fMN" secondAttribute="leading" id="SjQ-QO-wLz"/>
+                            <constraint firstItem="PJW-Si-ZqA" firstAttribute="leading" secondItem="RdZ-RG-fMN" secondAttribute="leading" constant="20" id="UGM-Xe-Sye"/>
+                            <constraint firstItem="ZtG-IY-e6r" firstAttribute="trailing" secondItem="RdZ-RG-fMN" secondAttribute="trailing" id="lNt-mX-JyN"/>
+                            <constraint firstItem="ZtG-IY-e6r" firstAttribute="top" secondItem="gsH-z0-1Em" secondAttribute="bottom" id="tcu-vJ-082"/>
+                            <constraint firstItem="RdZ-RG-fMN" firstAttribute="trailing" secondItem="gsH-z0-1Em" secondAttribute="trailing" constant="20" id="zQ6-pb-hAT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RdZ-RG-fMN"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bRj-Jx-h6A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="6259" y="1642"/>
         </scene>
     </scenes>
     <resources>
