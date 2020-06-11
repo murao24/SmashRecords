@@ -12,6 +12,7 @@ import RealmSwift
 class AnalyzeByMyFighter: Object {
     
     @objc dynamic var myFighter = ""
+    @objc dynamic var fighterID = 0
     @objc dynamic var game = 0
     @objc dynamic var win = 0
     @objc dynamic var lose = 0

@@ -13,8 +13,6 @@ class RecordFormViewController: UIViewController {
     
     private var records: Results<Record>?
     
-    var analyze = Analyze()
-    
     let realm = try! Realm()
     
     @IBOutlet weak var myFighterView: UIButton!
@@ -113,8 +111,7 @@ class RecordFormViewController: UIViewController {
         newRecord.result = result
         save(record: newRecord)
         dismiss(animated: true, completion: nil)
-        
-        analyze.analyzeRecord(myFighter: myFighter, opponentFighter: opponentFighter, stage: stage)
+    
     }
     
     func save(record: Record) {

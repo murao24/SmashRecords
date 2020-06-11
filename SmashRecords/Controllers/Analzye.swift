@@ -19,97 +19,68 @@ class Analyze {
     private var analyzeByStages: Results<AnalyzeByStage>?
     
     
-    func analyzeRecord(myFighter: String, opponentFighter: String, stage: String) {
+    func analyzeRecord() {
         
-        
-        // myFighter
-        let newAnalyzeByMyFighter = AnalyzeByMyFighter()
-        newAnalyzeByMyFighter.myFighter = myFighter
-        var myGame = 0
-        var myWin = 0
-        
-        records = realm.objects(Record.self).filter("myFighter == %@", myFighter)
-        if records?.count != 0 {
-            if let records = records {
-                myGame = records.count
-            }
+        records = realm.objects(Record.self)
+
+        for i in 0...S.fightersArray.count - 1 {
             
-            records = records?.filter("result == true")
-            if let records = records {
-                myWin = records.count
-            }
+            // myFighter
+            let myGame = records?.filter("myFighter == %@", S.fightersArray[i][1])
+            let myWin = myGame?.filter("result == true")
+            let newAnalyzeByMyFighter = AnalyzeByMyFighter()
             
-            newAnalyzeByMyFighter.game = myGame
-            newAnalyzeByMyFighter.win = myWin
-            newAnalyzeByMyFighter.lose = myGame - myWin
-            newAnalyzeByMyFighter.winRate = Float(CGFloat(myWin) / CGFloat(myGame) * 100)
-        } else {
-            newAnalyzeByMyFighter.game = 0
-            newAnalyzeByMyFighter.win = 0
-            newAnalyzeByMyFighter.lose = 0
-            newAnalyzeByMyFighter.winRate = 0
+            newAnalyzeByMyFighter.myFighter = S.fightersArray[i][1]
+            newAnalyzeByMyFighter.fighterID = i
+            
+            if let game = myGame, let win = myWin {
+                newAnalyzeByMyFighter.game = game.count
+                newAnalyzeByMyFighter.win = win.count
+                newAnalyzeByMyFighter.lose = game.count - win.count
+                newAnalyzeByMyFighter.winRate = Float(CGFloat(win.count) / CGFloat(game.count) * 100)
+            }
+            update(record: newAnalyzeByMyFighter)
+            
+            // opponentFighter
+            let opponentGame = records?.filter("opponentFighter == %@", S.fightersArray[i][1])
+            let opponentWin = opponentGame?.filter("result == true")
+            let newAnalyzeByOpponentFighter = AnalyzeByOpponentFighter()
+            
+            newAnalyzeByOpponentFighter.opponentFighter = S.fightersArray[i][1]
+            newAnalyzeByOpponentFighter.fighterID = i
+            
+            if let game = opponentGame, let win = opponentWin {
+                newAnalyzeByOpponentFighter.game = game.count
+                newAnalyzeByOpponentFighter.win = win.count
+                newAnalyzeByOpponentFighter.lose = game.count - win.count
+                newAnalyzeByOpponentFighter.winRate = Float(CGFloat(win.count) / CGFloat(game.count) * 100)
+            }
+            update(record: newAnalyzeByOpponentFighter)
+            
         }
-        update(record: newAnalyzeByMyFighter)
+        
+        for i in 0...S.stageArray.count - 1 {
+            
+            // stage
+            let stageGame = records?.filter("stage == %@", S.stageArray[i])
+            let stageWin = stageGame?.filter("result == true")
+            let newAnalyzeByStage = AnalyzeByStage()
+            
+            newAnalyzeByStage.stage = S.stageArray[i]
+            newAnalyzeByStage.stageID = i
+            
+            if let game = stageGame, let win = stageWin {
+                newAnalyzeByStage.game = game.count
+                newAnalyzeByStage.win = win.count
+                newAnalyzeByStage.lose = game.count - win.count
+                newAnalyzeByStage.winRate = Float(CGFloat(win.count) / CGFloat(game.count) * 100)
+            }
+            update(record: newAnalyzeByStage)
+
+        }
+        
 
         
-        // opponentFighter
-        let newAnalyzeByOpponentFighter = AnalyzeByOpponentFighter()
-        newAnalyzeByOpponentFighter.opponentFighter = opponentFighter
-        var opponentGame = 0
-        var opponentWin = 0
-        
-        records = realm.objects(Record.self).filter("opponentFighter == %@", opponentFighter)
-        if records?.count != 0 {
-            if let records = records {
-                opponentGame = records.count
-            }
-            
-            records = records?.filter("result == true")
-            if let records = records {
-                opponentWin = records.count
-            }
-            
-            newAnalyzeByOpponentFighter.game = opponentGame
-            newAnalyzeByOpponentFighter.win = opponentWin
-            newAnalyzeByOpponentFighter.lose = opponentGame - opponentWin
-            newAnalyzeByOpponentFighter.winRate = Float(CGFloat(opponentWin) / CGFloat(opponentGame) * 100)
-        } else {
-            newAnalyzeByOpponentFighter.game = 0
-            newAnalyzeByOpponentFighter.win = 0
-            newAnalyzeByOpponentFighter.lose = 0
-            newAnalyzeByOpponentFighter.winRate = 0
-        }
-        update(record: newAnalyzeByOpponentFighter)
-        
-        // stage
-        let newAnalyzeByStage = AnalyzeByStage()
-        newAnalyzeByStage.stage = stage
-        var stageGame = 0
-        var stageWin = 0
-        
-        records = realm.objects(Record.self).filter("stage == %@", stage)
-        if records?.count != 0 {
-            if let records = records {
-                stageGame = records.count
-            }
-            
-            records = records?.filter("result == true")
-            if let records = records {
-                stageWin = records.count
-            }
-            
-            newAnalyzeByStage.game = stageGame
-            newAnalyzeByStage.win = stageWin
-            newAnalyzeByStage.lose = stageGame - stageWin
-            newAnalyzeByStage.winRate = Float(CGFloat(stageWin) / CGFloat(stageGame) * 100)
-        } else {
-            newAnalyzeByStage.game = 0
-            newAnalyzeByStage.win = 0
-            newAnalyzeByStage.lose = 0
-            newAnalyzeByStage.winRate = 0
-        }
-        update(record: newAnalyzeByStage)
-
     }
     
 
@@ -126,5 +97,39 @@ class Analyze {
     
     
 
+    // for analyzeVC
+    var pageViewController: UIPageViewController?
+    var viewControllers: [UIViewController] = []
+    
+    func loadVC() {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
+        
+        pageViewController = storyboard.instantiateViewController(identifier: "PageViewController") as! PageViewController
+
+        let ownVC = storyboard.instantiateViewController(identifier: "OwnViewController") as! AnalyzeOwnViewController
+        let opponentVC = storyboard.instantiateViewController(identifier: "OpponentViewController") as! AnalyzeOpponentViewController
+        let stageVC = storyboard.instantiateViewController(identifier: "StageViewController") as! AnalyzeStageViewController
+        
+        viewControllers = [ownVC, opponentVC, stageVC]
+    }
+    
+    func switchVC(vc: UIViewController) {
+        if let pageViewController = pageViewController {
+            pageViewController.setViewControllers([vc], direction: .forward, animated: true, completion: nil)
+        }
+    }
+    
+
+    
+    func loadOpponentFighterRecord(sortedBy: String, ascending: Bool = false) {
+        analyzeByOpponentFighters = realm.objects(AnalyzeByOpponentFighter.self)
+        analyzeByOpponentFighters = analyzeByOpponentFighters?.sorted(byKeyPath: sortedBy, ascending: ascending)
+    }
+
+    func loadStageRecord(sortedBy: String, ascending: Bool = false) {
+        analyzeByStages = realm.objects(AnalyzeByStage.self)
+        analyzeByStages = analyzeByStages?.sorted(byKeyPath: sortedBy, ascending: ascending)
+    }
 
 }

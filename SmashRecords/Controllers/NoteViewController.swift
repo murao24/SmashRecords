@@ -15,7 +15,7 @@ class NoteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.rowHeight = 50
+        tableView.rowHeight = 45
         tableView.reloadData()
     }
     

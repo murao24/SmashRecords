@@ -11,8 +11,6 @@ import RealmSwift
 
 class RecordViewController: UIViewController {
     
-    var analyze = Analyze()
-    
     let realm = try! Realm()
     
     private var records: Results<Record>?
@@ -96,20 +94,8 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let action = UIContextualAction(style: .destructive, title: nil) { (_, _, completionHandler) in
             
-            var myFighter = ""
-            var opponentFighter = ""
-            var stage = ""
-            // recalculate analyzeRecord
-            if let records = self.records?[indexPath.row] {
-                myFighter = records.myFighter
-                opponentFighter = records.opponentFighter
-                stage = records.stage
-            }
-            
             self.deleteRecord(at: indexPath)
             self.tableView.reloadData()
-            
-            self.analyze.analyzeRecord(myFighter: myFighter, opponentFighter: opponentFighter, stage: stage)
             
             completionHandler(true)
         }
