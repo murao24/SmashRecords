@@ -24,6 +24,7 @@
 		043C1B7F248E27440059C6C5 /* UIView+AddBorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B7E248E27440059C6C5 /* UIView+AddBorder.swift */; };
 		043C1B81248F45CF0059C6C5 /* RecordFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B80248F45CF0059C6C5 /* RecordFormViewController.swift */; };
 		043C1B83248F45E60059C6C5 /* SelectFighterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 043C1B82248F45E60059C6C5 /* SelectFighterViewController.swift */; };
+		0458732D2491F641006FABF4 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0458732C2491F641006FABF4 /* TabbarViewController.swift */; };
 		049F86132491A647000F0EC3 /* AnalyzeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049F86122491A647000F0EC3 /* AnalyzeTableViewCell.swift */; };
 		04A33DD624906192003DBA48 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A33DD524906192003DBA48 /* PageViewController.swift */; };
 		04A33DD8249061BE003DBA48 /* TopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A33DD7249061BE003DBA48 /* TopViewController.swift */; };
@@ -58,6 +59,7 @@
 		043C1B7E248E27440059C6C5 /* UIView+AddBorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UIView+AddBorder.swift"; path = "SmashRecords/Controllers/UIView+AddBorder.swift"; sourceTree = SOURCE_ROOT; };
 		043C1B80248F45CF0059C6C5 /* RecordFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RecordFormViewController.swift; path = SmashRecords/Views/RecordFormViewController.swift; sourceTree = SOURCE_ROOT; };
 		043C1B82248F45E60059C6C5 /* SelectFighterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectFighterViewController.swift; sourceTree = "<group>"; };
+		0458732C2491F641006FABF4 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		049F86122491A647000F0EC3 /* AnalyzeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeTableViewCell.swift; sourceTree = "<group>"; };
 		04A33DD524906192003DBA48 /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = PageViewController.swift; path = SmashRecords/Views/PageViewController.swift; sourceTree = SOURCE_ROOT; };
 		04A33DD7249061BE003DBA48 /* TopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TopViewController.swift; path = SmashRecords/Views/TopViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				04204541248DB9BE00DAED78 /* Main.storyboard */,
+				0458732C2491F641006FABF4 /* TabbarViewController.swift */,
 				043C1B7A248E1F9A0059C6C5 /* RecordTableViewCell.swift */,
 				049F86122491A647000F0EC3 /* AnalyzeTableViewCell.swift */,
 				043C1B6B248DDCFA0059C6C5 /* NoteTableViewCell.swift */,
@@ -312,6 +315,7 @@
 				043C1B7F248E27440059C6C5 /* UIView+AddBorder.swift in Sources */,
 				04A33DD8249061BE003DBA48 /* TopViewController.swift in Sources */,
 				043C1B79248E1DE00059C6C5 /* ContainerViewController.swift in Sources */,
+				0458732D2491F641006FABF4 /* TabbarViewController.swift in Sources */,
 				04A33DDA249061E1003DBA48 /* AnalyzeOwnViewController.swift in Sources */,
 				043C1B7B248E1F9A0059C6C5 /* RecordTableViewCell.swift in Sources */,
 				04A33DE8249067DB003DBA48 /* Analzye.swift in Sources */,

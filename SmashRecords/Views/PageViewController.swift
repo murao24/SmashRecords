@@ -18,6 +18,12 @@ class PageViewController: UIPageViewController {
         self.delegate = self
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
+    }
+    
     
     func getFirst() -> AnalyzeOwnViewController {
         return storyboard!.instantiateViewController(identifier: "OwnViewController") as! AnalyzeOwnViewController

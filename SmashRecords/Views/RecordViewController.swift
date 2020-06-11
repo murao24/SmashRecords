@@ -105,6 +105,7 @@ extension RecordViewController: UITableViewDataSource, UITableViewDelegate {
         
         return configulation
 
+        
     }
     
 

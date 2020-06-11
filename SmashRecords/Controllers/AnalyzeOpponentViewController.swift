@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import RealmSwift
 
 class AnalyzeOpponentViewController: UIViewController {
+    
+    let realm = try! Realm()
 
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet var changeRecords: [UIButton]!
     @IBOutlet var sortRecords: [UIButton]!
+    
+    private var analyzeByOpponentFighters: Results<AnalyzeByOpponentFighter>?
     
     var analyze = Analyze()
     
@@ -31,6 +36,8 @@ class AnalyzeOpponentViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         switchTopButton(n: 1)
+        switchSortButton(n: 0)
+        loadOpponentFighterRecord(sortedBy: "fighterID", ascending: true)
     }
     
     func switchTopButton(n: Int) {
@@ -64,6 +71,27 @@ class AnalyzeOpponentViewController: UIViewController {
     
     @IBAction func sortButtonPressed(_ sender: UIButton) {
         switchSortButton(n: sender.tag)
+        switch sender.tag {
+        case 0:
+            loadOpponentFighterRecord(sortedBy: "fighterID", ascending: true)
+        case 1:
+            loadOpponentFighterRecord(sortedBy: "game")
+        case 2:
+            loadOpponentFighterRecord(sortedBy: "win")
+        case 3:
+            loadOpponentFighterRecord(sortedBy: "lose")
+        case 4:
+            loadOpponentFighterRecord(sortedBy: "winRate")
+        default:
+            break
+        }
+    }
+    
+    // fetch and sort records
+    func loadOpponentFighterRecord(sortedBy: String, ascending: Bool = false) {
+        analyzeByOpponentFighters = realm.objects(AnalyzeByOpponentFighter.self)
+        analyzeByOpponentFighters = analyzeByOpponentFighters?.sorted(byKeyPath: sortedBy, ascending: ascending)
+        tableView.reloadData()
     }
     
 
@@ -79,10 +107,30 @@ extension AnalyzeOpponentViewController: UITableViewDataSource, UITableViewDeleg
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnalyzeTableViewCell
         cell.winRateLabel.adjustsFontSizeToFitWidth = true
 
-        cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])?.withAlignmentRectInsets(UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110))
-        
+        if let analyzeByOpponentFighter = analyzeByOpponentFighters?[indexPath.row] {
+            
+            cell.fighterLabel.image = UIImage(named: analyzeByOpponentFighter.opponentFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110))
+            
+            guard analyzeByOpponentFighter.game != 0 else {
+                cell.gameLabel.text = "-"
+                cell.winLabel.text = "-"
+                cell.loseLabel.text = "-"
+                cell.winRateLabel.text = "-"
+                return cell
+            }
+            
+            cell.gameLabel.text = "\(String(analyzeByOpponentFighter.game))"
+            cell.winLabel.text = "\(String(analyzeByOpponentFighter.win))"
+            cell.loseLabel.text = "\(String(analyzeByOpponentFighter.lose))"
+            cell.winRateLabel.text = "\(String(round(analyzeByOpponentFighter.winRate * 10) / 10))%"
+
+        }
         return cell
     }
     
-    
+ 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+
 }

@@ -35,8 +35,10 @@ class AnalyzeOwnViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         switchTopButton(n: 0)
-        analyze.analyzeRecord()
+        switchSortButton(n: 0)
+        loadMyFighterRecord(sortedBy: "fighterID", ascending: true)
     }
     
     
@@ -75,7 +77,7 @@ class AnalyzeOwnViewController: UIViewController {
         switchSortButton(n: sender.tag)
         switch sender.tag {
         case 0:
-            loadMyFighterRecord(sortedBy: "myFighter", ascending: true)
+            loadMyFighterRecord(sortedBy: "fighterID", ascending: true)
         case 1:
             loadMyFighterRecord(sortedBy: "game")
         case 2:
@@ -93,6 +95,7 @@ class AnalyzeOwnViewController: UIViewController {
     func loadMyFighterRecord(sortedBy: String, ascending: Bool = false) {
         analyzeByMyFighters = realm.objects(AnalyzeByMyFighter.self)
         analyzeByMyFighters = analyzeByMyFighters?.sorted(byKeyPath: sortedBy, ascending: ascending)
+        tableView.reloadData()
     }
     
 
@@ -109,12 +112,29 @@ extension AnalyzeOwnViewController: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! AnalyzeTableViewCell
         cell.winRateLabel.adjustsFontSizeToFitWidth = true
         
-        cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])?.withAlignmentRectInsets(UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110))
-        
-        
-        
+        if let analyzeByMyFighter = analyzeByMyFighters?[indexPath.row] {
+            
+            cell.fighterLabel.image = UIImage(named: analyzeByMyFighter.myFighter)?.withAlignmentRectInsets(UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110))
+            
+            guard analyzeByMyFighter.game != 0 else {
+                cell.gameLabel.text = "-"
+                cell.winLabel.text = "-"
+                cell.loseLabel.text = "-"
+                cell.winRateLabel.text = "-"
+                return cell
+            }
+            
+            cell.gameLabel.text = "\(String(analyzeByMyFighter.game))"
+            cell.winLabel.text = "\(String(analyzeByMyFighter.win))"
+            cell.loseLabel.text = "\(String(analyzeByMyFighter.lose))"
+            cell.winRateLabel.text = "\(String(round(analyzeByMyFighter.winRate * 10) / 10))%"
+
+        }
         return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
     
 }

@@ -119,17 +119,5 @@ class Analyze {
             pageViewController.setViewControllers([vc], direction: .forward, animated: true, completion: nil)
         }
     }
-    
-
-    
-    func loadOpponentFighterRecord(sortedBy: String, ascending: Bool = false) {
-        analyzeByOpponentFighters = realm.objects(AnalyzeByOpponentFighter.self)
-        analyzeByOpponentFighters = analyzeByOpponentFighters?.sorted(byKeyPath: sortedBy, ascending: ascending)
-    }
-
-    func loadStageRecord(sortedBy: String, ascending: Bool = false) {
-        analyzeByStages = realm.objects(AnalyzeByStage.self)
-        analyzeByStages = analyzeByStages?.sorted(byKeyPath: sortedBy, ascending: ascending)
-    }
 
 }
