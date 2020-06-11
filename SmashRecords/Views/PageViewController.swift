@@ -9,6 +9,8 @@
 import UIKit
 
 class PageViewController: UIPageViewController {
+    
+    var parentVC: TopViewController?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +24,8 @@ class PageViewController: UIPageViewController {
         super.viewWillAppear(animated)
         
         self.setViewControllers([getFirst()], direction: .forward, animated: true, completion: nil)
+        
+        parentVC = self.parent as? TopViewController
     }
     
     
@@ -39,6 +43,17 @@ class PageViewController: UIPageViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    func switchTopButton(n: Int) {
+        
+        if let parentVC = parentVC {
+            for topButton in parentVC.topButtons {
+                offButton(button: topButton)
+            }
+            onButton(button: parentVC.topButtons[n])
+        }
+
     }
 
 }
@@ -64,6 +79,25 @@ extension PageViewController: UIPageViewControllerDataSource, UIPageViewControll
         } else {
             return nil
         }
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController, didFinishAnimating finished: Bool, previousViewControllers: [UIViewController], transitionCompleted completed: Bool) {
+    
+        guard completed, let currentVC = pageViewController.viewControllers?.first else {
+            return
+        }
+        
+        switch currentVC {
+        case is AnalyzeOwnViewController:
+            switchTopButton(n: 0)
+        case is AnalyzeOpponentViewController:
+            switchTopButton(n: 1)
+        case is AnalyzeStageViewController:
+            switchTopButton(n: 2)
+        default:
+            break
+        }
+
     }
     
 }

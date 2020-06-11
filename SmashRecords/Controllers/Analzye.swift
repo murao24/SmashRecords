@@ -12,7 +12,7 @@ import RealmSwift
 class Analyze {
     
     let realm = try! Realm()
-
+    
     private var records: Results<Record>?
     private var analyzeByMyFighters: Results<AnalyzeByMyFighter>?
     private var analyzeByOpponentFighters: Results<AnalyzeByOpponentFighter>?
@@ -22,7 +22,7 @@ class Analyze {
     func analyzeRecord() {
         
         records = realm.objects(Record.self)
-
+        
         for i in 0...S.fightersArray.count - 1 {
             
             // myFighter
@@ -76,14 +76,11 @@ class Analyze {
                 newAnalyzeByStage.winRate = Float(CGFloat(win.count) / CGFloat(game.count) * 100)
             }
             update(record: newAnalyzeByStage)
-
+            
         }
-        
-
         
     }
     
-
     
     func update(record: Object) {
         do {
@@ -96,28 +93,4 @@ class Analyze {
     }
     
     
-
-    // for analyzeVC
-    var pageViewController: UIPageViewController?
-    var viewControllers: [UIViewController] = []
-    
-    func loadVC() {
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
-        
-        pageViewController = storyboard.instantiateViewController(identifier: "PageViewController") as! PageViewController
-
-        let ownVC = storyboard.instantiateViewController(identifier: "OwnViewController") as! AnalyzeOwnViewController
-        let opponentVC = storyboard.instantiateViewController(identifier: "OpponentViewController") as! AnalyzeOpponentViewController
-        let stageVC = storyboard.instantiateViewController(identifier: "StageViewController") as! AnalyzeStageViewController
-        
-        viewControllers = [ownVC, opponentVC, stageVC]
-    }
-    
-    func switchVC(vc: UIViewController) {
-        if let pageViewController = pageViewController {
-            pageViewController.setViewControllers([vc], direction: .forward, animated: true, completion: nil)
-        }
-    }
-
 }

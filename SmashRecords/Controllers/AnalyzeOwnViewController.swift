@@ -15,7 +15,6 @@ class AnalyzeOwnViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    @IBOutlet var changeRecords: [UIButton]!
     @IBOutlet var sortRecords: [UIButton]!
     
     private var analyzeByMyFighters: Results<AnalyzeByMyFighter>?
@@ -28,48 +27,21 @@ class AnalyzeOwnViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 45
-        
-        analyze.loadVC()
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        switchTopButton(n: 0)
         switchSortButton(n: 0)
         loadMyFighterRecord(sortedBy: "fighterID", ascending: true)
     }
-    
-    
-    func switchTopButton(n: Int) {
-        for changeRecord in changeRecords {
-            offButton(button: changeRecord)
-        }
-        onButton(button: changeRecords[n])
-    }
+
     
     func switchSortButton(n: Int) {
         for sortRecord in sortRecords {
             offButton(button: sortRecord)
         }
         onButton(button: sortRecords[n])
-    }
-    
-    
-    @IBAction func topButtonPressed(_ sender: UIButton) {
-        switchTopButton(n: sender.tag)
-
-        switch sender.tag {
-        case 0:
-            analyze.switchVC(vc: analyze.viewControllers[0])
-        case 1:
-            analyze.switchVC(vc: analyze.viewControllers[1])
-        case 2:
-            analyze.switchVC(vc: analyze.viewControllers[2])
-        default:
-            break
-        }
     }
     
     

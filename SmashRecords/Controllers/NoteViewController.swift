@@ -17,6 +17,7 @@ class NoteViewController: UIViewController {
         
         tableView.rowHeight = 45
         tableView.reloadData()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

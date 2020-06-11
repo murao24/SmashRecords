@@ -14,8 +14,7 @@ class AnalyzeStageViewController: UIViewController {
     let realm = try! Realm()
 
     @IBOutlet weak var tableView: UITableView!
-    
-    @IBOutlet var changeRecords: [UIButton]!
+
     @IBOutlet var sortRecords: [UIButton]!
     
     private var analyzeByStages: Results<AnalyzeByStage>?
@@ -30,22 +29,13 @@ class AnalyzeStageViewController: UIViewController {
         tableView.rowHeight = 45
         
         sortRecords[0].titleLabel?.adjustsFontSizeToFitWidth = true
-        
-        analyze.loadVC()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        switchTopButton(n: 2)
         switchSortButton(n: 0)
         loadStageRecord(sortedBy: "stageID", ascending: true)
-    }
-    
-    func switchTopButton(n: Int) {
-        for changeRecord in changeRecords {
-            offButton(button: changeRecord)
-        }
-        onButton(button: changeRecords[n])
     }
     
     func switchSortButton(n: Int) {
@@ -54,21 +44,7 @@ class AnalyzeStageViewController: UIViewController {
         }
         onButton(button: sortRecords[n])
     }
-    
-    @IBAction func topButtonPressed(_ sender: UIButton) {
-        switchTopButton(n: sender.tag)
-        
-        switch sender.tag {
-        case 0:
-            analyze.switchVC(vc: analyze.viewControllers[0])
-        case 1:
-            analyze.switchVC(vc: analyze.viewControllers[1])
-        case 2:
-            analyze.switchVC(vc: analyze.viewControllers[2])
-        default:
-            break
-        }
-    }
+
     
     @IBAction func sortButtonPressed(_ sender: UIButton) {
         switchSortButton(n: sender.tag)
