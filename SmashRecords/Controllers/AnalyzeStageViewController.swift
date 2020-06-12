@@ -28,21 +28,23 @@ class AnalyzeStageViewController: UIViewController {
         tableView.delegate = self
         tableView.rowHeight = 45
         
+        addUnderLine(button: sortRecords[0])
+        
         sortRecords[0].titleLabel?.adjustsFontSizeToFitWidth = true
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        switchSortButton(n: 0)
+
         loadStageRecord(sortedBy: "stageID", ascending: true)
     }
     
     func switchSortButton(n: Int) {
         for sortRecord in sortRecords {
-            offButton(button: sortRecord)
+            removeUnderLine(buton: sortRecord)
         }
-        onButton(button: sortRecords[n])
+        addUnderLine(button: sortRecords[n])
     }
 
     

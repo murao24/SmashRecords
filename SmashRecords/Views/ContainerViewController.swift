@@ -22,7 +22,7 @@ class ContainerViewController: UIViewController {
     
     func customizeButton() {
         addButton.layer.cornerRadius = (addButton.frame.size.width) / 2
-        addButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 8, right: 0)
+        addButton.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 0)
         addButton.layer.shadowColor = UIColor.black.cgColor
         addButton.layer.shadowOffset = CGSize(width: 1, height: 1)
         addButton.layer.shadowOpacity = 0.5

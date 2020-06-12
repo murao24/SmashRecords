@@ -18,7 +18,7 @@ class TopViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        onButton(button: topButtons[0])
+        addUnderLine(button: topButtons[0])
         
         pageViewController = children.first as? UIPageViewController
         
@@ -39,9 +39,9 @@ class TopViewController: UIViewController {
     func switchTopButton(n: Int) {
         
         for topButton in topButtons {
-            offButton(button: topButton)
+            removeUnderLine(buton: topButton)
         }
-        onButton(button: topButtons[n])
+        addUnderLine(button: topButtons[n])
         
     }
 

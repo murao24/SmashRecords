@@ -27,20 +27,21 @@ class AnalyzeOpponentViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.rowHeight = 45
+        
+        addUnderLine(button: sortRecords[0])
 
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        switchSortButton(n: 0)
         loadOpponentFighterRecord(sortedBy: "fighterID", ascending: true)
     }
     
     func switchSortButton(n: Int) {
         for sortRecord in sortRecords {
-            offButton(button: sortRecord)
+            removeUnderLine(buton: sortRecord)
         }
-        onButton(button: sortRecords[n])
+        addUnderLine(button: sortRecords[n])
     }
     
     

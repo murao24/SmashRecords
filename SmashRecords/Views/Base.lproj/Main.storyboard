@@ -72,13 +72,13 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="lWe-Fg-KlT" firstAttribute="leading" secondItem="hQp-Cw-AlZ" secondAttribute="leading" constant="20" id="0l4-jw-aJQ"/>
                             <constraint firstItem="4bf-pa-hC0" firstAttribute="leading" secondItem="hQp-Cw-AlZ" secondAttribute="leading" id="284-sQ-Et0"/>
-                            <constraint firstItem="4bf-pa-hC0" firstAttribute="top" secondItem="lWe-Fg-KlT" secondAttribute="bottom" constant="5" id="47N-Va-7Lm"/>
+                            <constraint firstItem="4bf-pa-hC0" firstAttribute="top" secondItem="lWe-Fg-KlT" secondAttribute="bottom" constant="5" id="96l-DT-3g7"/>
+                            <constraint firstItem="hQp-Cw-AlZ" firstAttribute="trailing" secondItem="lWe-Fg-KlT" secondAttribute="trailing" constant="20" id="9aM-Jr-m5b"/>
                             <constraint firstItem="4bf-pa-hC0" firstAttribute="trailing" secondItem="hQp-Cw-AlZ" secondAttribute="trailing" id="BdN-XT-FJs"/>
-                            <constraint firstItem="lWe-Fg-KlT" firstAttribute="leading" secondItem="hQp-Cw-AlZ" secondAttribute="leading" constant="20" id="FJr-9g-T8z"/>
                             <constraint firstItem="4bf-pa-hC0" firstAttribute="bottom" secondItem="hQp-Cw-AlZ" secondAttribute="bottom" id="Jom-k8-Ed9"/>
-                            <constraint firstItem="hQp-Cw-AlZ" firstAttribute="trailing" secondItem="lWe-Fg-KlT" secondAttribute="trailing" constant="20" id="g7q-Ac-6fW"/>
-                            <constraint firstItem="lWe-Fg-KlT" firstAttribute="top" secondItem="hQp-Cw-AlZ" secondAttribute="top" constant="5" id="tmW-xy-WNN"/>
+                            <constraint firstItem="lWe-Fg-KlT" firstAttribute="top" secondItem="hQp-Cw-AlZ" secondAttribute="top" constant="5" id="kfa-aB-9j4"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hQp-Cw-AlZ"/>
                     </view>
@@ -160,7 +160,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oFY-ab-G6k">
-                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="77" width="414" height="785"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="740-Wy-f03" customClass="AnalyzeTableViewCell" customModule="SmashRecords" customModuleProvider="target">
@@ -223,7 +223,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="oFY-ab-G6k" firstAttribute="top" secondItem="0HI-n8-sxU" secondAttribute="bottom" id="0Zv-ah-Ue6"/>
+                            <constraint firstItem="oFY-ab-G6k" firstAttribute="top" secondItem="0HI-n8-sxU" secondAttribute="bottom" constant="3" id="0Zv-ah-Ue6"/>
                             <constraint firstItem="0HI-n8-sxU" firstAttribute="leading" secondItem="8BF-b7-acX" secondAttribute="leading" constant="20" id="8xF-FC-odR"/>
                             <constraint firstItem="0HI-n8-sxU" firstAttribute="top" secondItem="8BF-b7-acX" secondAttribute="top" id="G5k-eH-wzd"/>
                             <constraint firstItem="8BF-b7-acX" firstAttribute="bottom" secondItem="oFY-ab-G6k" secondAttribute="bottom" id="O08-68-mao"/>
@@ -374,7 +374,7 @@
                                     <constraint firstAttribute="height" constant="60" id="EIY-xy-14B"/>
                                     <constraint firstAttribute="width" constant="60" id="qe6-a5-Z1j"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="65"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="40"/>
                                 <state key="normal" title="+">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -563,13 +563,13 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3DR-Ub-qKB">
                                 <rect key="frame" x="40" y="770" width="334" height="42"/>
-                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="USd-Qg-TL7"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <state key="normal" title="登録">
-                                    <color key="titleColor" systemColor="systemPurpleColor" red="0.68627450980000004" green="0.32156862749999998" blue="0.87058823529999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="registerButtonPressed:" destination="VQH-uY-0rh" eventType="touchUpInside" id="S3C-74-DXV"/>
@@ -1546,7 +1546,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="mCF-dg-384">
-                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="77" width="414" height="785"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="b8d-l5-Bsv" customClass="AnalyzeTableViewCell" customModule="SmashRecords" customModuleProvider="target">
@@ -1611,7 +1611,7 @@
                         <constraints>
                             <constraint firstItem="jD2-vP-jYv" firstAttribute="top" secondItem="ddK-KI-xqy" secondAttribute="top" id="0S2-wp-O6z"/>
                             <constraint firstItem="ddK-KI-xqy" firstAttribute="trailing" secondItem="jD2-vP-jYv" secondAttribute="trailing" constant="20" id="8sA-ft-8II"/>
-                            <constraint firstItem="mCF-dg-384" firstAttribute="top" secondItem="jD2-vP-jYv" secondAttribute="bottom" id="HW5-u5-yNJ"/>
+                            <constraint firstItem="mCF-dg-384" firstAttribute="top" secondItem="jD2-vP-jYv" secondAttribute="bottom" constant="3" id="HW5-u5-yNJ"/>
                             <constraint firstItem="mCF-dg-384" firstAttribute="leading" secondItem="ddK-KI-xqy" secondAttribute="leading" id="Nqh-HE-tq0"/>
                             <constraint firstItem="mCF-dg-384" firstAttribute="trailing" secondItem="ddK-KI-xqy" secondAttribute="trailing" id="eqt-V1-UBj"/>
                             <constraint firstItem="jD2-vP-jYv" firstAttribute="leading" secondItem="ddK-KI-xqy" secondAttribute="leading" constant="20" id="lDV-vJ-7MD"/>
@@ -1692,7 +1692,7 @@
                                 </subviews>
                             </stackView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZtG-IY-e6r">
-                                <rect key="frame" x="0.0" y="74" width="414" height="788"/>
+                                <rect key="frame" x="0.0" y="77" width="414" height="785"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="PpL-hk-giJ" customClass="AnalyzeTableViewCell" customModule="SmashRecords" customModuleProvider="target">
@@ -1763,7 +1763,7 @@
                             <constraint firstItem="ZtG-IY-e6r" firstAttribute="leading" secondItem="RdZ-RG-fMN" secondAttribute="leading" id="SjQ-QO-wLz"/>
                             <constraint firstItem="ZtG-IY-e6r" firstAttribute="trailing" secondItem="RdZ-RG-fMN" secondAttribute="trailing" id="lNt-mX-JyN"/>
                             <constraint firstItem="gsH-z0-1Em" firstAttribute="top" secondItem="RdZ-RG-fMN" secondAttribute="top" id="nVC-FG-vLm"/>
-                            <constraint firstItem="ZtG-IY-e6r" firstAttribute="top" secondItem="gsH-z0-1Em" secondAttribute="bottom" id="tcu-vJ-082"/>
+                            <constraint firstItem="ZtG-IY-e6r" firstAttribute="top" secondItem="gsH-z0-1Em" secondAttribute="bottom" constant="3" id="tcu-vJ-082"/>
                             <constraint firstItem="RdZ-RG-fMN" firstAttribute="trailing" secondItem="gsH-z0-1Em" secondAttribute="trailing" constant="20" id="zQ6-pb-hAT"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="RdZ-RG-fMN"/>

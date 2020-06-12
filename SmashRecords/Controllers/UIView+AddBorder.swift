@@ -20,6 +20,7 @@ extension UIView {
     func addBorder(width: CGFloat, color: UIColor, position: BorderPosition) {
         
         let border = CALayer()
+        border.name = "addBorder"
 
         switch position {
         case .top:
@@ -31,7 +32,7 @@ extension UIView {
             border.backgroundColor = color.cgColor
             self.layer.addSublayer(border)
         case .bottom:
-            border.frame = CGRect(x: 0, y: 0, width: self.frame.width, height: width)
+            border.frame = CGRect(x: 0, y: self.frame.height, width: self.frame.width, height: width)
             border.backgroundColor = color.cgColor
             self.layer.addSublayer(border)
         case .left:

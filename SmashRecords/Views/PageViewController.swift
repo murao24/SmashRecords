@@ -49,9 +49,9 @@ class PageViewController: UIPageViewController {
         
         if let parentVC = parentVC {
             for topButton in parentVC.topButtons {
-                offButton(button: topButton)
+                removeUnderLine(buton: topButton)
             }
-            onButton(button: parentVC.topButtons[n])
+            addUnderLine(button: parentVC.topButtons[n])
         }
 
     }
