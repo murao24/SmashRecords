@@ -14,11 +14,9 @@ class Analyze {
     let realm = try! Realm()
     
     private var records: Results<Record>?
-    private var analyzeByMyFighters: Results<AnalyzeByMyFighter>?
-    private var analyzeByOpponentFighters: Results<AnalyzeByOpponentFighter>?
-    private var analyzeByStages: Results<AnalyzeByStage>?
     
     
+    // MARK: - TotalRecoeds
     func analyzeRecord() {
         
         records = realm.objects(Record.self)
@@ -91,6 +89,35 @@ class Analyze {
             print("Error updating object\(error)")
         }
     }
+    
+
+    
+    
+    
+    // MARK: - MainFighter
+    
+    
+    func createMainFighter(fighterName: String) {
+        let newMainFighter = MainFighter()
+        newMainFighter.ID = 0
+        newMainFighter.mainFighter = fighterName
+        save(mainFighter: newMainFighter)
+    }
+    
+    func save(mainFighter: MainFighter) {
+        do {
+            try realm.write {
+                realm.add(mainFighter, update: .modified)
+            }
+        } catch {
+            print("Error saving a mainFighter\(error)")
+        }
+    }
+ 
+    func loadMainFighterRecord() {
+        
+    }
+    
     
     
 }

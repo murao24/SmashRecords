@@ -20,11 +20,11 @@ class RecordViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
-        tableView.rowHeight = 50
+        tableView.rowHeight = 45
         tableView.dataSource = self
         tableView.delegate = self
         loadRecord()
-
+        
         print(Realm.Configuration.defaultConfiguration.fileURL!)
     }
     
