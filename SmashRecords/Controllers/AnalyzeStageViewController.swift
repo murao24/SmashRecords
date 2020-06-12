@@ -29,6 +29,7 @@ class AnalyzeStageViewController: UIViewController {
         tableView.rowHeight = 45
         
         addUnderLine(button: sortRecords[0])
+        loadStageRecord(sortedBy: "stageID", ascending: true)
         
         sortRecords[0].titleLabel?.adjustsFontSizeToFitWidth = true
 
@@ -37,6 +38,7 @@ class AnalyzeStageViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
 
+        switchSortButton(n: 0)
         loadStageRecord(sortedBy: "stageID", ascending: true)
     }
     

@@ -29,11 +29,13 @@ class AnalyzeOpponentViewController: UIViewController {
         tableView.rowHeight = 45
         
         addUnderLine(button: sortRecords[0])
-
+        loadOpponentFighterRecord(sortedBy: "fighterID", ascending: true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        switchSortButton(n: 0)
         loadOpponentFighterRecord(sortedBy: "fighterID", ascending: true)
     }
     

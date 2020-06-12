@@ -28,6 +28,10 @@ extension UIViewController {
     
     func removeUnderLine(buton: UIButton) {
         
+        guard buton.layer.sublayers != nil else {
+            return
+        }
+
         for layer: CALayer in buton.layer.sublayers! {
             if layer.name == "addBorder" {
                 layer.removeFromSuperlayer()
