@@ -19,6 +19,9 @@ class MainFighterViewController: UIViewController {
     
     var analyze = Analyze()
     
+    var f: [[Any]] = [[]]
+    var s: [[Any]] = [[]]
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var mainFighterButton: UIButton!
     @IBOutlet weak var gameLabel: UILabel!
@@ -60,7 +63,6 @@ class MainFighterViewController: UIViewController {
         if mainFighter?.count == 0 {
             analyze.createMainFighter()
         } else {
-            
             if let mainFighter = mainFighter?[0] {
                 analyzeByMyFighter = realm.objects(AnalyzeByMyFighter.self).filter("myFighter == %@", mainFighter.mainFighter)
                 
@@ -102,12 +104,52 @@ class MainFighterViewController: UIViewController {
     
     func loadMainFighterRecord() {
         
-        if let mainFighter = mainFighter?[0] {
+        f = [[]]
+        s = [[]]
+        
+        var game = 0
+        var win = 0
+
+        if let mainFighter = mainFighter?[0].mainFighter {
+
+            // fighters
+            for i in 0...S.fightersArray.count - 1 {
+                
+                // search mainFighter records
+                records = realm.objects(Record.self).filter("myFighter == %@", mainFighter)
+                // search mainFighter * opponentFighter
+                records = records?.filter("opponentFighter == %@", S.fightersArray[i][1])
+                if let records = records {
+                    game = records.count
+                }
+                // search win records
+                records = records?.filter("result == true")
+                if let records = records {
+                    win = records.count
+                }
+                f.append([mainFighter, S.fightersArray[i][1], game, win])
+
+            }
             
-            records = realm.objects(Record.self).filter("myFighter == %@", mainFighter.mainFighter)
-            
-//
-            
+            // stages
+            for i in 0...S.stageArray.count - 1 {
+                
+                print("*****************************************************************")
+                // search mainFighter records
+                records = realm.objects(Record.self).filter("myFighter == %@", mainFighter)
+                // search mainFighter * stage
+                records = records?.filter("stage == %@", S.stageArray[i])
+                if let records = records {
+                    game = records.count
+                }
+                // search win records
+                records = records?.filter("result == true")
+                if let records = records {
+                    win = records.count
+                }
+                s.append([mainFighter, S.stageArray[i], game, win])
+            }
+
         }
 
     }
