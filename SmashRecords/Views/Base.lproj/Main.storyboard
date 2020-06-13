@@ -10,7 +10,7 @@
         <!--メインファイター-->
         <scene sceneID="UmT-cN-BDM">
             <objects>
-                <viewController id="Kty-nG-wCa" customClass="MainFighterViewController" customModule="SmashRecords" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainFIghterViewController" id="Kty-nG-wCa" customClass="MainFighterViewController" customModule="SmashRecords" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Aac-Mi-44W">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -236,7 +236,7 @@
                     <connections>
                         <outlet property="gameLabel" destination="fq0-Pf-Oyc" id="ke6-iT-2eu"/>
                         <outlet property="loseLabel" destination="2os-UL-Q7y" id="bx5-zi-xGW"/>
-                        <outlet property="mainFighterButton" destination="WcZ-Cu-lBN" id="7b4-Xf-ZuW"/>
+                        <outlet property="mainFighterButton" destination="WcZ-Cu-lBN" id="o57-j7-GWi"/>
                         <outlet property="tableView" destination="f8I-Al-Kf7" id="fcn-di-yCE"/>
                         <outlet property="winLabel" destination="1RC-7G-Zd2" id="396-CD-VdC"/>
                         <outlet property="winRateLabel" destination="qLp-VP-Npp" id="7QN-00-0vg"/>
@@ -1538,7 +1538,7 @@
         <scene sceneID="fWi-pg-9uG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="MF3-cS-xFb" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="メインファイター" image="person.fill" id="1wn-33-sDN"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="メインファイター" image="person.fill" id="1wn-33-sDN"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4lC-dg-D9L">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -1636,35 +1636,35 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="iX7-Hs-6gy" customClass="RecordTableViewCell" customModule="SmashRecords" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="77.5"/>
+                                        <rect key="frame" x="0.0" y="28" width="414" height="78.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iX7-Hs-6gy" id="uT5-HH-VkR">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="77.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="78.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-qZ-aPd">
-                                                    <rect key="frame" x="20" y="0.0" width="374" height="77.5"/>
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="78.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="usU-6y-IMi">
-                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="77.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="51" height="78.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                             <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="lJJ-Yp-ex5">
-                                                            <rect key="frame" x="81" y="0.0" width="51" height="77.5"/>
+                                                            <rect key="frame" x="81" y="0.0" width="51" height="78.5"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VS" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qh7-jS-DmE">
-                                                            <rect key="frame" x="162" y="0.0" width="51" height="77.5"/>
+                                                            <rect key="frame" x="162" y="0.0" width="51" height="78.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uTP-jv-B2r">
-                                                            <rect key="frame" x="243" y="0.0" width="51" height="77.5"/>
+                                                            <rect key="frame" x="243" y="0.0" width="51" height="78.5"/>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gGp-nm-6Jo">
-                                                            <rect key="frame" x="323" y="0.0" width="51" height="77"/>
+                                                            <rect key="frame" x="323" y="0.0" width="51" height="78"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                             <color key="textColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

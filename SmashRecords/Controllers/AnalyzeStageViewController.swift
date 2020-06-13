@@ -102,10 +102,10 @@ extension AnalyzeStageViewController: UITableViewDataSource, UITableViewDelegate
                 return cell
             }
 
-            cell.gameLabel.text = "\(String(analyzeByStage.game))"
-            cell.winLabel.text = "\(String(analyzeByStage.win))"
-            cell.loseLabel.text = "\(String(analyzeByStage.lose))"
-            cell.winRateLabel.text = "\(String(round(analyzeByStage.winRate * 10) / 10))%"
+            cell.gameLabel.text = "\(analyzeByStage.game)"
+            cell.winLabel.text = "\(analyzeByStage.win)"
+            cell.loseLabel.text = "\(analyzeByStage.lose)"
+            cell.winRateLabel.text = "\(round(analyzeByStage.winRate * 10) / 10)%"
 
         }
         

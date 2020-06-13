@@ -98,10 +98,10 @@ extension AnalyzeOwnViewController: UITableViewDataSource, UITableViewDelegate {
                 return cell
             }
             
-            cell.gameLabel.text = "\(String(analyzeByMyFighter.game))"
-            cell.winLabel.text = "\(String(analyzeByMyFighter.win))"
-            cell.loseLabel.text = "\(String(analyzeByMyFighter.lose))"
-            cell.winRateLabel.text = "\(String(round(analyzeByMyFighter.winRate * 10) / 10))%"
+            cell.gameLabel.text = "\(analyzeByMyFighter.game)"
+            cell.winLabel.text = "\(analyzeByMyFighter.win)"
+            cell.loseLabel.text = "\(analyzeByMyFighter.lose)"
+            cell.winRateLabel.text = "\(round(analyzeByMyFighter.winRate * 10) / 10)%"
 
         }
         return cell

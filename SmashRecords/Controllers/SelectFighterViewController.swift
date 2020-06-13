@@ -44,6 +44,16 @@ class SelectFighterViewController: UIViewController {
             preVC.opponentFighterView.imageEdgeInsets = UIEdgeInsets(top: 170, left: 170, bottom: 170, right: 170)
             preVC.opponentFighter = fighterName
             dismiss(animated: true, completion: nil)
+        case "mainFighter":
+            let preTVC = self.presentingViewController as! TabbarViewController
+            let preNC = preTVC.viewControllers?[1] as! UINavigationController
+            let preVC = preNC.viewControllers.first as! MainFighterViewController
+
+            preVC.analyze.updateMainFighter(fighterName: fighterName)
+            preVC.loadMainFighter()
+            preVC.showMainFighterTotalRecord()
+            preVC.customizeMainFighterButton()
+            dismiss(animated: true, completion: nil)
         default:
             break
         }

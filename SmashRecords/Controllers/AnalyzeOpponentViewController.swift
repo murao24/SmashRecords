@@ -97,10 +97,10 @@ extension AnalyzeOpponentViewController: UITableViewDataSource, UITableViewDeleg
                 return cell
             }
             
-            cell.gameLabel.text = "\(String(analyzeByOpponentFighter.game))"
-            cell.winLabel.text = "\(String(analyzeByOpponentFighter.win))"
-            cell.loseLabel.text = "\(String(analyzeByOpponentFighter.lose))"
-            cell.winRateLabel.text = "\(String(round(analyzeByOpponentFighter.winRate * 10) / 10))%"
+            cell.gameLabel.text = "\(analyzeByOpponentFighter.game)"
+            cell.winLabel.text = "\(analyzeByOpponentFighter.win)"
+            cell.loseLabel.text = "\(analyzeByOpponentFighter.lose)"
+            cell.winRateLabel.text = "\(round(analyzeByOpponentFighter.winRate * 10) / 10)%"
 
         }
         return cell

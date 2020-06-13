@@ -96,8 +96,22 @@ class Analyze {
     
     // MARK: - MainFighter
     
+    // if mainFighter is nil
+    func createMainFighter() {
+        
+        let newMainFighter = MainFighter()
+        newMainFighter.mainFighter = "mario"
+        newMainFighter.ID = 0
+        do {
+            try realm.write {
+                realm.add(newMainFighter)
+            }
+        } catch {
+            print("Error creating a MainFighter\(error)")
+        }
+    }
     
-    func createMainFighter(fighterName: String) {
+    func updateMainFighter(fighterName: String) {
         let newMainFighter = MainFighter()
         newMainFighter.ID = 0
         newMainFighter.mainFighter = fighterName
@@ -112,10 +126,6 @@ class Analyze {
         } catch {
             print("Error saving a mainFighter\(error)")
         }
-    }
- 
-    func loadMainFighterRecord() {
-        
     }
     
     

@@ -20,7 +20,7 @@ class TabbarViewController: UITabBarController {
     
     override func tabBar(_ tabBar: UITabBar, didSelect item: UITabBarItem) {
         
-        if item.tag == 2 {
+        if item.tag == 1 || item.tag == 2 {
             
             ActivityIndicator = UIActivityIndicatorView()
             ActivityIndicator.frame = CGRect(x: 0, y: 0, width: 50, height: 50)
