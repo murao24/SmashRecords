@@ -53,6 +53,8 @@ class MainFighterViewController: UIViewController {
         
         // load mainFighter Record for tableVIew cell
         loadMainFighterRecord()
+        // reload
+        tableView.reloadData()
     }
     
     func loadMainFighter() {
@@ -134,7 +136,6 @@ class MainFighterViewController: UIViewController {
             // stages
             for i in 0...S.stageArray.count - 1 {
                 
-                print("*****************************************************************")
                 // search mainFighter records
                 records = realm.objects(Record.self).filter("myFighter == %@", mainFighter)
                 // search mainFighter * stage
@@ -191,14 +192,54 @@ extension MainFighterViewController: UITableViewDataSource, UITableViewDelegate 
             let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! MainFighterTableViewCell
             
             cell.fighterLabel.image = UIImage(named: S.fightersArray[indexPath.row][1])?.withAlignmentRectInsets(UIEdgeInsets(top: 110, left: 110, bottom: 110, right: 110))
+            cell.winRateLabel.adjustsFontSizeToFitWidth = true
             
+            let game = f[indexPath.row + 1][2] as! Int
+            let win = f[indexPath.row + 1][3] as! Int
+            
+            if game != 0 {
+                let lose = game - win
+                let winRate = roundf((Float(win) / Float(game)) * 1000) / 10
+                
+                cell.gameLabel.text = "\(game)"
+                cell.winLabel.text = "\(win)"
+                cell.loseLabel.text = "\(lose)"
+                cell.winRateLabel.text = "\(winRate)%"
+                
+            } else {
+                cell.gameLabel.text = "-"
+                cell.winLabel.text = "-"
+                cell.loseLabel.text = "-"
+                cell.winRateLabel.text = "-"
+            }
+
             return cell
             
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "StageCell", for: indexPath) as! MainFighterTableViewCell
             
             cell.stageLabel.adjustsFontSizeToFitWidth = true
+            cell.stageWinRateLabel.adjustsFontSizeToFitWidth = true
             cell.stageLabel.text = S.stageArray[indexPath.row]
+            
+            let game = s[indexPath.row + 1][2] as! Int
+            let win = s[indexPath.row + 1][3] as! Int
+            
+            if game != 0 {
+                let lose = game - win
+                let winRate = roundf((Float(win) / Float(game)) * 1000) / 10
+                
+                cell.stageGameLabel.text = "\(game)"
+                cell.stageWinLabel.text = "\(win)"
+                cell.stageLoseLabel.text = "\(lose)"
+                cell.stageWinRateLabel.text = "\(winRate)%"
+                
+            } else {
+                cell.stageGameLabel.text = "-"
+                cell.stageWinLabel.text = "-"
+                cell.stageLoseLabel.text = "-"
+                cell.stageWinRateLabel.text = "-"
+            }
 
             return cell
             
