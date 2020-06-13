@@ -35,11 +35,7 @@ class TabbarViewController: UITabBarController {
             
             self.view.addSubview(ActivityIndicator)
             
-            ActivityIndicator.startAnimating()
-            
-//            DispatchQueue.main.async {
-//                self.analyzeRecord()
-//            }
+            ActivityIndicator.startAnimating() 
             analyzeRecord()
             ActivityIndicator.stopAnimating()
         }

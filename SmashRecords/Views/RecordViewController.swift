@@ -24,8 +24,7 @@ class RecordViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
         loadRecord()
-        
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+    
     }
     
     
