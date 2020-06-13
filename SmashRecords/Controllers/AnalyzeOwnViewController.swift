@@ -18,8 +18,6 @@ class AnalyzeOwnViewController: UIViewController {
     @IBOutlet var sortRecords: [UIButton]!
     
     private var analyzeByMyFighters: Results<AnalyzeByMyFighter>?
-
-    var analyze = Analyze()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +28,7 @@ class AnalyzeOwnViewController: UIViewController {
         
         addUnderLine(button: sortRecords[0])
         loadMyFighterRecord(sortedBy: "fighterID", ascending: true)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {

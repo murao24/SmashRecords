@@ -11,7 +11,7 @@ import RealmSwift
 
 class RecordFormViewController: UIViewController {
     
-    private var records: Results<Record>?
+    private var mainFighter: Results<MainFighter>?
     
     let realm = try! Realm()
     
@@ -34,6 +34,21 @@ class RecordFormViewController: UIViewController {
         // 終点 and 勝ち is selected
         onButton(button: stageButtons[0])
         onButton(button: resultButtons[0])
+
+        drawVC()
+    }
+
+    func drawVC() {
+        
+        // load main fighter
+        loadMainFighter()
+        
+        if mainFighter?.count != 0 {
+            if let mainFighter = mainFighter {
+                myFighter = mainFighter[0].mainFighter
+            }
+        }
+        
         // round register button
         registerButton.layer.cornerRadius = 20
         // set myFighter and opponentFighter image
@@ -41,6 +56,7 @@ class RecordFormViewController: UIViewController {
         myFighterView.imageEdgeInsets = UIEdgeInsets(top: 170, left: 170, bottom: 170, right: 170)
         opponentFighterView.setImage(UIImage(named: opponentFighter), for: .normal)
         opponentFighterView.imageEdgeInsets = UIEdgeInsets(top: 170, left: 170, bottom: 170, right: 170)
+
     }
     
 
@@ -112,6 +128,10 @@ class RecordFormViewController: UIViewController {
         save(record: newRecord)
         dismiss(animated: true, completion: nil)
     
+    }
+    
+    func loadMainFighter() {
+        mainFighter = realm.objects(MainFighter.self)
     }
     
     func save(record: Record) {

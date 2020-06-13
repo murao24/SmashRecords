@@ -49,7 +49,7 @@ class SelectFighterViewController: UIViewController {
             let preNC = preTVC.viewControllers?[1] as! UINavigationController
             let preVC = preNC.viewControllers.first as! MainFighterViewController
 
-            preVC.analyze.updateMainFighter(fighterName: fighterName)
+            preVC.updateMainFighter(fighterName: fighterName)
             preVC.loadMainFighter()
             preVC.showMainFighterTotalRecord()
             preVC.customizeMainFighterButton()

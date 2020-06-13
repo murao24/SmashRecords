@@ -19,8 +19,6 @@ class AnalyzeOpponentViewController: UIViewController {
     
     private var analyzeByOpponentFighters: Results<AnalyzeByOpponentFighter>?
     
-    var analyze = Analyze()
-    
     override func viewDidLoad() {
         super.viewDidLoad()
 

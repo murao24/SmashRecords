@@ -18,8 +18,6 @@ class AnalyzeStageViewController: UIViewController {
     @IBOutlet var sortRecords: [UIButton]!
     
     private var analyzeByStages: Results<AnalyzeByStage>?
-    
-    var analyze = Analyze()
 
     override func viewDidLoad() {
         super.viewDidLoad()

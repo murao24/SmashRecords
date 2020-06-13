@@ -17,8 +17,6 @@ class MainFighterViewController: UIViewController {
     var analyzeByMyFighter: Results<AnalyzeByMyFighter>?
     var records: Results<Record>?
     
-    var analyze = Analyze()
-    
     var f: [[Any]] = [[]]
     var s: [[Any]] = [[]]
     
@@ -63,7 +61,9 @@ class MainFighterViewController: UIViewController {
         
         // if mainFighter is nil, create MainFighter
         if mainFighter?.count == 0 {
-            analyze.createMainFighter()
+            createMainFighter()
+            mainFighterButton.setImage(UIImage(named: "mario"), for: .normal)
+            mainFighterButton.imageEdgeInsets = UIEdgeInsets(top: 300, left: 250, bottom: 300, right: 250)
         } else {
             if let mainFighter = mainFighter?[0] {
                 analyzeByMyFighter = realm.objects(AnalyzeByMyFighter.self).filter("myFighter == %@", mainFighter.mainFighter)
@@ -153,6 +153,39 @@ class MainFighterViewController: UIViewController {
 
         }
 
+    }
+    
+    
+    // if mainFighter is nil
+    func createMainFighter() {
+        
+        let newMainFighter = MainFighter()
+        newMainFighter.mainFighter = "mario"
+        newMainFighter.ID = 0
+        do {
+            try realm.write {
+                realm.add(newMainFighter)
+            }
+        } catch {
+            print("Error creating a MainFighter\(error)")
+        }
+    }
+    
+    func updateMainFighter(fighterName: String) {
+        let newMainFighter = MainFighter()
+        newMainFighter.ID = 0
+        newMainFighter.mainFighter = fighterName
+        save(mainFighter: newMainFighter)
+    }
+    
+    func save(mainFighter: MainFighter) {
+        do {
+            try realm.write {
+                realm.add(mainFighter, update: .modified)
+            }
+        } catch {
+            print("Error saving a mainFighter\(error)")
+        }
     }
     
     

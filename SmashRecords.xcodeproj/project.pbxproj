@@ -37,7 +37,6 @@
 		04A33DE2249066FD003DBA48 /* AnalyzeByMyFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A33DE1249066FD003DBA48 /* AnalyzeByMyFighter.swift */; };
 		04A33DE424906708003DBA48 /* AnalyzeByOpponentFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A33DE324906708003DBA48 /* AnalyzeByOpponentFighter.swift */; };
 		04A33DE624906723003DBA48 /* AnalyzeByStage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A33DE524906723003DBA48 /* AnalyzeByStage.swift */; };
-		04A33DE8249067DB003DBA48 /* Analzye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A33DE7249067DB003DBA48 /* Analzye.swift */; };
 		04B0807C248F48C000C7AA22 /* ToggleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B0807B248F48C000C7AA22 /* ToggleButton.swift */; };
 		F61700FD0060FD0C27CC7B60 /* Pods_SmashRecords.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41E499C1802254A7930DA157 /* Pods_SmashRecords.framework */; };
 /* End PBXBuildFile section */
@@ -75,7 +74,6 @@
 		04A33DE1249066FD003DBA48 /* AnalyzeByMyFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeByMyFighter.swift; sourceTree = "<group>"; };
 		04A33DE324906708003DBA48 /* AnalyzeByOpponentFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeByOpponentFighter.swift; sourceTree = "<group>"; };
 		04A33DE524906723003DBA48 /* AnalyzeByStage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeByStage.swift; sourceTree = "<group>"; };
-		04A33DE7249067DB003DBA48 /* Analzye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Analzye.swift; path = SmashRecords/Controllers/Analzye.swift; sourceTree = SOURCE_ROOT; };
 		04B0807B248F48C000C7AA22 /* ToggleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToggleButton.swift; sourceTree = "<group>"; };
 		41E499C1802254A7930DA157 /* Pods_SmashRecords.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SmashRecords.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		81BE0B8C1BEDC7CF272001A7 /* Pods-SmashRecords.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmashRecords.release.xcconfig"; path = "Target Support Files/Pods-SmashRecords/Pods-SmashRecords.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,7 +129,6 @@
 			isa = PBXGroup;
 			children = (
 				04204541248DB9BE00DAED78 /* Main.storyboard */,
-				0458732C2491F641006FABF4 /* TabbarViewController.swift */,
 				043C1B7A248E1F9A0059C6C5 /* RecordTableViewCell.swift */,
 				045EE48B24930BDC009449FA /* MainFighterTableViewCell.swift */,
 				049F86122491A647000F0EC3 /* AnalyzeTableViewCell.swift */,
@@ -144,6 +141,7 @@
 		043C1B6A248DDCD80059C6C5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0458732C2491F641006FABF4 /* TabbarViewController.swift */,
 				043C1B78248E1DE00059C6C5 /* ContainerViewController.swift */,
 				043C1B76248E1C660059C6C5 /* RecordViewController.swift */,
 				043C1B80248F45CF0059C6C5 /* RecordFormViewController.swift */,
@@ -151,7 +149,6 @@
 				045EE48924930ACB009449FA /* MainFighterViewController.swift */,
 				04A33DD7249061BE003DBA48 /* TopViewController.swift */,
 				04A33DD524906192003DBA48 /* PageViewController.swift */,
-				04A33DE7249067DB003DBA48 /* Analzye.swift */,
 				04A33DD9249061E1003DBA48 /* AnalyzeOwnViewController.swift */,
 				04A33DDB249061E9003DBA48 /* AnalyzeOpponentViewController.swift */,
 				04A33DDD249061F3003DBA48 /* AnalyzeStageViewController.swift */,
@@ -329,7 +326,6 @@
 				0458732D2491F641006FABF4 /* TabbarViewController.swift in Sources */,
 				04A33DDA249061E1003DBA48 /* AnalyzeOwnViewController.swift in Sources */,
 				043C1B7B248E1F9A0059C6C5 /* RecordTableViewCell.swift in Sources */,
-				04A33DE8249067DB003DBA48 /* Analzye.swift in Sources */,
 				04A33DE424906708003DBA48 /* AnalyzeByOpponentFighter.swift in Sources */,
 				04A33DDE249061F3003DBA48 /* AnalyzeStageViewController.swift in Sources */,
 				0448AE4D249318F400FCAE54 /* MainFighter.swift in Sources */,
